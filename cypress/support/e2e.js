@@ -18,12 +18,27 @@ import './commands'
 import './pages/access-portal-success'
 import './pages/access-registration-form-sucess'
 
-
-
 Cypress.on('uncaught:exception', (err) => {
 
     if (err.message.includes('Script error') || err.message.includes('cross origin')) {
         return false
     }
     return true
-});
+})
+
+beforeEach(() => {
+    cy.intercept('**/adsbygoogle.js', { statusCode: 204 }).as('blockAds')
+    cy.intercept('**/doubleclick.net/**', { statusCode: 204 }).as('blockDoubleClick')
+    cy.intercept('**/google-analytics.com/**', { statusCode: 204 }).as('blockAnalytics')
+
+    Cypress.on('uncaught:exception', (err) => {
+        if (
+            err.message.includes('adsbygoogle') ||
+            err.message.includes('doubleclick') ||
+            err.message.includes('google-analytics')
+        ) {
+            return false;
+        }
+        return true;
+    })
+})

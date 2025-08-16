@@ -1,4 +1,4 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require("cypress")
 
 module.exports = defineConfig({
   e2e: {
@@ -12,9 +12,25 @@ module.exports = defineConfig({
     specPattern: 'cypress/e2e/**/*.feature',
     baseUrl: 'https://demoqa.com',
     setupNodeEvents(on, config) {
-      const cucumber = require('cypress-cucumber-preprocessor').default;
-      on('file:preprocessor', cucumber());
+      const cucumber = require('cypress-cucumber-preprocessor').default
+      on('before:run', () => {
+        require('cypress-intercept-http')(on)
+      })
+      on('task', {
+        log(message) {
+          console.log(message)
+          return null
+        }
+      })
+
+      on('file:preprocessor', cucumber())
     },
-    defaultCommandTimeout: 10000,
+    chromeWebSecurity: false,
+    blockHosts: [
+      '*.googlesyndication.com',
+      '*.doubleclick.net',
+      '*.google-analytics.com',
+      '*.facebook.net'
+    ]
   }
-});
+})
