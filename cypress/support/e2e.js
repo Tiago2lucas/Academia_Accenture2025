@@ -18,6 +18,7 @@ import './commands'
 import './pages/access-portal-success'
 import './pages/access-registration-form-success'
 import './pages/filling-fields-success'
+import './pages/edit-valid-registration-success'
 
 Cypress.on('uncaught:exception', (err) => {
 
