@@ -20,6 +20,7 @@ import './pages/access-registration-form-success'
 import './pages/filling-fields-success'
 import './pages/edit-valid-registration-success'
 import './pages/delete-registration-success'
+import './pages/edit-invalid-registration-negative'
 
 Cypress.on('uncaught:exception', (err) => {
 

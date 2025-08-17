@@ -12,7 +12,6 @@ And('clico no botão Submit', () => {
 })
 
 Then('o novo registro deve ser exibido na tabela', () => {
-
     cy.get('@userData').then((userData) => {
         cy.validateRecord(userData)
     })
