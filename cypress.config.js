@@ -6,7 +6,7 @@ module.exports = defineConfig({
     viewportWidth: 1200,
     viewportHeight: 720,
     watchForFileChanges: false,
-    screenshotOnRunFailure: true,
+    screenshotOnRunFailure: false,
     screenshotsFolder: 'cypress/screenshots',
     trashAssetsBeforeRuns: false,
     specPattern: 'cypress/e2e/**/*.feature',

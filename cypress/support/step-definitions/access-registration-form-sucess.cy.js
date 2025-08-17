@@ -1,4 +1,4 @@
-import { Given, When, And, Then, Before, After, } from "cypress-cucumber-preprocessor/steps";
+import { Given, When, And, Then, After, } from "cypress-cucumber-preprocessor/steps";
 
 Given('que estou na página Web Tables', () => {
     cy.visit('/webtables')
@@ -13,4 +13,5 @@ Then('deve abrir um modal intitulado {string}', (mensagem) => {
 And('evidencio todos os campos que  deve está visíveis e vazios conforme especificação:',
     () => {
         cy.evidencCamposRegistreForm()
+        cy.printTela('ValidacaoRegistration')
     })

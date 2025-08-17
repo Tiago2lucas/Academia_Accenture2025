@@ -7,5 +7,6 @@ When('clico na opção Elements', () => { cy.clcikElements() })
 And('clico na opção Web Tables', () => { cy.clcikElementsWebTable() })
 Then('evidencio que estou na página Web Tables', () => {
     cy.validationTitle()
+    cy.printTela('validacaoAcesso')
 
 })
