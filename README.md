@@ -13,8 +13,8 @@ Veja abaixo uma imagen do funcionamento do projeto:
 
 - [Cypress](https://www.cypress.io/) 🧪 — Framework de testes E2E
 - [Node.js](https://nodejs.org/) 🟩 — Ambiente de execução JavaScript
-- [npm](https://www.npmjs.com/) 📦 — Gerenciador de pacotes
-- [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor) 🥒 — Permite escrever testes em formato Gherkin (BDD) usando arquivos `.feature`
+- [Npm](https://www.npmjs.com/) 📦 — Gerenciador de pacotes
+- [Cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor) 🥒 — Permite escrever testes em formato Gherkin (BDD) usando arquivos `.feature`
 - [Faker.js](https://fakerjs.dev/) 🎲 — Biblioteca para geração de dados fake/dinâmicos nos testes automatizados, facilitando a criação de cenários realistas e evitando dados duplicados.
 
 ### Como o Faker.js é utilizado?
