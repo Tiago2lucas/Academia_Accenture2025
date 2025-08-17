@@ -1,16 +1,5 @@
 import { faker } from "@faker-js/faker"
-
-
-const FIRST_NAME = '#firstName'
-const LAST_NAME = '#lastName'
-const EMAIL = '#userEmail'
-const AGE = '#age'
-const SALARY = '#salary'
-const DEPARTMENT = '#department'
-const ALERT_AGE_ERR = '#age-wrapper'
-const ALERT_SALARY_ERR = '#salary-wrapper'
-const ALERT_EMAIL_ERR = '#userEmail-wrapper'
-
+import { FIRST_NAME, LAST_NAME, EMAIL, AGE, SALARY, DEPARTMENT, ALERT_AGE_ERR, ALERT_EMAIL_ERR, ALERT_SALARY_ERR } from "../commands"
 
 function preencherCamposBase(overrides = {}) {
     const userData = {

@@ -1,12 +1,5 @@
-const BTN_ADD = '#addNewRecordButton'
+import { TITLE_MODEL_REGISTRATION_FORM, BTN_ADD, FIRST_NAME, LAST_NAME, EMAIL, AGE, SALARY, DEPARTMENT } from "../commands"
 
-const TITLE_MODEL_REGISTR_FORM = '#registration-form-modal'
-const FIRST_NAME = '#firstName'
-const LAST_NAME = '#lastName'
-const EMAIL = '#userEmail'
-const AGE = '#age'
-const SALARY = '#salary'
-const DEPARTMENT = '#department'
 
 
 Cypress.Commands.add('clickBtnAdd', () => {
@@ -14,7 +7,7 @@ Cypress.Commands.add('clickBtnAdd', () => {
 })
 
 Cypress.Commands.add('validationModalAbert', (mensagem) => {
-    cy.get(TITLE_MODEL_REGISTR_FORM)
+    cy.get(TITLE_MODEL_REGISTRATION_FORM)
         .contains('Registration Form')
         .should('contain', mensagem)
 })

@@ -1,8 +1,5 @@
 import { faker } from "@faker-js/faker"
-
-const FIRST_NAME = '#firstName'
-const AGE = '#age'
-const BTN_SUBMIT = '#submit'
+import { FIRST_NAME, AGE, BTN_SUBMIT } from "../commands"
 
 Cypress.Commands.add('editarRegistroAleatorio', () => {
     cy.get('.rt-tr-group:has([title="Edit"])').its('length').then(numRegistros => {

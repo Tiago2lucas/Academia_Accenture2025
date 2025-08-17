@@ -1,12 +1,6 @@
 import { faker } from "@faker-js/faker"
 
-const FIRST_NAME = '#firstName'
-const LAST_NAME = '#lastName'
-const EMAIL = '#userEmail'
-const AGE = '#age'
-const SALARY = '#salary'
-const DEPARTMENT = '#department'
-const BTN_REGISTRATION = '#submit'
+import { FIRST_NAME, LAST_NAME, EMAIL, AGE, SALARY, DEPARTMENT, BTN_REGISTRATION } from "../commands"
 
 Cypress.Commands.add('prencheDados', () => {
     const userData = {

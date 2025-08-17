@@ -1,8 +1,4 @@
-const CARD_ELEMENTS = 'h5'
-const ELEMENTS_WEB_TABLES = '#item-3'
-const TITLE_WEB_TABLES = 'h1'
-
-
+import { CARD_ELEMENTS, ELEMENTS_WEB_TABLES, TITLE_WEB_TABLES } from "../commands"
 
 Cypress.Commands.add('clcikElements', () => {
     cy.get(CARD_ELEMENTS).contains('Elements').should('be.visible').click()
