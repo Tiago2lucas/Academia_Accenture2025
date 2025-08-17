@@ -1,4 +1,4 @@
-import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps"
+import { When, And, Then } from "cypress-cucumber-preprocessor/steps"
 
 When('edito um registro e deixo o campo First Name vazio', () => {
     cy.preencheDadosFirstNameVazio()

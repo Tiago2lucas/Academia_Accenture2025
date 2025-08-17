@@ -5,7 +5,6 @@ Given('que estou na página Web Tables', () => {
 })
 When('clico no botão Add', () => { cy.clickBtnAdd() })
 
-
 Then('deve abrir um modal intitulado {string}', (mensagem) => {
     cy.validationModalAbert(mensagem)
 })

@@ -22,19 +22,19 @@ import './pages/edit-valid-registration-success'
 import './pages/delete-registration-success'
 import './pages/edit-invalid-registration-negative'
 
-Cypress.on('uncaught:exception', (err) => {
-
-    if (err.message.includes('Script error') || err.message.includes('cross origin')) {
+Cypress.on('uncaught:exception', (err, runnable) => {
+    const errorMessage = "Cannot read properties of null (reading 'document')"
+    if (err.message.includes(errorMessage)) {
         return false
     }
     return true
 })
 
+
 beforeEach(() => {
     cy.intercept('**/adsbygoogle.js', { statusCode: 204 }).as('blockAds')
     cy.intercept('**/doubleclick.net/**', { statusCode: 204 }).as('blockDoubleClick')
     cy.intercept('**/google-analytics.com/**', { statusCode: 204 }).as('blockAnalytics')
-
     Cypress.on('uncaught:exception', (err) => {
         if (
             err.message.includes('adsbygoogle') ||

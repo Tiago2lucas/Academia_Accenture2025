@@ -1,4 +1,4 @@
-import { Given, When, And, Then, } from "cypress-cucumber-preprocessor/steps"
+import { When, And, Then, } from "cypress-cucumber-preprocessor/steps"
 
 And('que o modal Registration Form está aberto', () => {
     cy.evidencCamposRegistreForm()

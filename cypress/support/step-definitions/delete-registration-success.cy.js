@@ -1,5 +1,5 @@
 
-import { Given, When, And, Then, } from "cypress-cucumber-preprocessor/steps"
+import { When, Then, } from "cypress-cucumber-preprocessor/steps"
 
 
 When('eu seleciono o ícone de Excluir para esse registro', () => {
