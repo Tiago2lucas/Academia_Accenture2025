@@ -41,9 +41,9 @@ beforeEach(() => {
             err.message.includes('doubleclick') ||
             err.message.includes('google-analytics')
         ) {
-            return false;
+            return false
         }
-        return true;
+        return true
     })
 })
 Cypress.on('uncaught:exception', (err, runnable) => {

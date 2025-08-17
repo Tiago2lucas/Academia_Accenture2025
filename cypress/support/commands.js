@@ -44,7 +44,9 @@ export const TITLE_MODEL_REGISTRATION_FORM = '#registration-form-modal'
 export const ALERT_AGE_ERR = '#age-wrapper'
 export const ALERT_SALARY_ERR = '#salary-wrapper'
 export const ALERT_EMAIL_ERR = '#userEmail-wrapper'
-
+export const ALERT_FIRSTNAME_ERR = '#firstName-wrapper'
+export const ALERT_LASTNAME_ERR = '#lastName-wrapper'
+export const ALERT_DEPARTMENT_ERR = '#department-wrapper'
 
 Cypress.Commands.add('printTela', (nome = 'screenshot') => {
 

@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker"
-import { FIRST_NAME, LAST_NAME, EMAIL, AGE, SALARY, DEPARTMENT, ALERT_AGE_ERR, ALERT_EMAIL_ERR, ALERT_SALARY_ERR } from "../commands"
+import { FIRST_NAME, LAST_NAME, EMAIL, AGE, SALARY, DEPARTMENT, ALERT_AGE_ERR, ALERT_EMAIL_ERR, ALERT_SALARY_ERR, ALERT_FIRSTNAME_ERR, ALERT_LASTNAME_ERR, ALERT_DEPARTMENT_ERR } from "../commands"
 
 function preencherCamposBase(overrides = {}) {
     const userData = {
@@ -22,6 +22,21 @@ function preencherCamposBase(overrides = {}) {
     cy.wrap(userData).as('userData', { timeout: 10000 })
 }
 
+Cypress.Commands.add('preencheDadosFirstNameVazio', () => {
+    preencherCamposBase()
+    cy.get(FIRST_NAME).clear()
+})
+
+Cypress.Commands.add('preencheDadosLastNameVazio', () => {
+    preencherCamposBase()
+    cy.get(LAST_NAME).clear()
+})
+
+
+Cypress.Commands.add('preencheDadosDepartmentVazio', () => {
+    preencherCamposBase()
+    cy.get(DEPARTMENT).clear()
+})
 
 Cypress.Commands.add('preencheDadosAgeInvalido', () => {
     preencherCamposBase({ age: faker.lorem.word() })
@@ -31,23 +46,30 @@ Cypress.Commands.add('preencheDadosEmailInvalido', () => {
     preencherCamposBase({ email: faker.internet.email().replace('@', '') })
 })
 
-
 Cypress.Commands.add('preencheDadosSalaryInvalido', () => {
     preencherCamposBase({ salary: faker.lorem.word() })
 })
 
+Cypress.Commands.add('alertErroFirstName', () => {
+    cy.get(ALERT_FIRSTNAME_ERR).should('be.visible', { timeout: 2000 })
+})
+
+Cypress.Commands.add('alertErroLastName', () => {
+    cy.get(ALERT_LASTNAME_ERR).should('be.visible', { timeout: 2000 })
+})
+
+Cypress.Commands.add('alertErroDepartment', () => {
+    cy.get(ALERT_DEPARTMENT_ERR).should('be.visible', { timeout: 2000 })
+})
+
 Cypress.Commands.add('alertErroAge', () => {
-    cy.get(ALERT_AGE_ERR).should('be.visible',
-        { timeout: 2000 })
+    cy.get(ALERT_AGE_ERR).should('be.visible', { timeout: 2000 })
 })
 
 Cypress.Commands.add('alertErroEmail', () => {
-
-    cy.get(ALERT_EMAIL_ERR).should('be.visible',
-        { timeout: 2000 })
+    cy.get(ALERT_EMAIL_ERR).should('be.visible', { timeout: 2000 })
 })
 
 Cypress.Commands.add('alertErroSalary', () => {
-    cy.get(ALERT_SALARY_ERR).should('be.visible',
-        { timeout: 2000 })
+    cy.get(ALERT_SALARY_ERR).should('be.visible', { timeout: 2000 })
 })
