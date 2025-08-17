@@ -1,7 +1,5 @@
 import { TITLE_MODEL_REGISTRATION_FORM, BTN_ADD, FIRST_NAME, LAST_NAME, EMAIL, AGE, SALARY, DEPARTMENT } from "../commands"
 
-
-
 Cypress.Commands.add('clickBtnAdd', () => {
     cy.get(BTN_ADD).contains('Add').should('be.visible').click()
 })

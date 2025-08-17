@@ -31,5 +31,5 @@ And('o modal apresenta um alert no campo Salary', () => {
 })
 Then('as alterações não devem ser salvas no campo Salary', () => {
     cy.clicarSubmit()
-    cy.printTela('AltecaoNaoSalva')
+    cy.printTela('AltecaoNaoSalvaSalary')
 })
