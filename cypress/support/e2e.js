@@ -16,7 +16,8 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 import './pages/access-portal-success'
-import './pages/access-registration-form-sucess'
+import './pages/access-registration-form-success'
+import './pages/filling-fields-success'
 
 Cypress.on('uncaught:exception', (err) => {
 

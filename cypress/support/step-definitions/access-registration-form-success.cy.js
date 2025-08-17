@@ -13,5 +13,5 @@ Then('deve abrir um modal intitulado {string}', (mensagem) => {
 And('evidencio todos os campos que  deve está visíveis e vazios conforme especificação:',
     () => {
         cy.evidencCamposRegistreForm()
-        cy.printTela('ValidacaoRegistration')
+        cy.printTela('ValidacaoRegistrationVazio')
     })

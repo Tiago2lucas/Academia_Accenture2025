@@ -1,4 +1,5 @@
 const BTN_ADD = '#addNewRecordButton'
+
 const TITLE_MODEL_REGISTR_FORM = '#registration-form-modal'
 const FIRST_NAME = '#firstName'
 const LAST_NAME = '#lastName'
